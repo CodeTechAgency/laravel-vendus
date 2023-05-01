@@ -1,8 +1,8 @@
 <?php
 
-namespace Waap\Vendus\Traits;
+namespace CodeTech\Vendus\Traits;
 
-use Waap\Vendus\Entities\VendusStock;
+use CodeTech\Vendus\Entities\VendusStock;
 
 trait InteractsWithVendusProduct
 {

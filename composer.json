@@ -1,6 +1,6 @@
 {
-  "name": "waap/laravel-vendus",
-  "description": "Laravel wrapper for the waap/vendus-api package.",
+  "name": "codetech/laravel-vendus",
+  "description": "Laravel wrapper for the codetech/vendus-api package.",
   "keywords": [
     "vendus",
     "faturação",
@@ -8,7 +8,7 @@
     "recibos",
     "laravel-vendus",
     "laravel",
-    "waap"
+    "codetech"
   ],
   "authors": [
     {
@@ -21,11 +21,11 @@
   "require": {
     "php": "^7.3|^8.0",
     "laravel/framework": "^7.0|^8.0",
-    "waap/vendus-api": "^1.1.0"
+    "codetech/vendus-api": "^1.1.0"
   },
   "autoload": {
     "psr-4": {
-      "Waap\\Vendus\\": "src/"
+      "CodeTech\\Vendus\\": "src/"
     }
   },
   "minimum-stability": "dev",
@@ -33,7 +33,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Waap\\Vendus\\Providers\\VendusServiceProvider"
+        "CodeTech\\Vendus\\Providers\\VendusServiceProvider"
       ]
     }
   }

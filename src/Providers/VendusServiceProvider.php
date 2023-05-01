@@ -1,6 +1,6 @@
 <?php
 
-namespace Waap\Vendus\Providers;
+namespace CodeTech\Vendus\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

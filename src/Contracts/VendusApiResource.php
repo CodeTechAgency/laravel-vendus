@@ -1,6 +1,6 @@
 <?php
 
-namespace Waap\Vendus\Contracts;
+namespace CodeTech\Vendus\Contracts;
 
 interface VendusApiResource
 {

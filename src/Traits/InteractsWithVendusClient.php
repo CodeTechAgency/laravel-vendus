@@ -1,6 +1,6 @@
 <?php
 
-namespace Waap\Vendus\Traits;
+namespace CodeTech\Vendus\Traits;
 
 trait InteractsWithVendusClient
 {

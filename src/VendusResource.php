@@ -1,9 +1,9 @@
 <?php
 
-namespace Waap\Vendus;
+namespace CodeTech\Vendus;
 
-use Waap\Vendus\Contracts\VendusApiResource;
-use Waap\VendusApi\Api;
+use CodeTech\Vendus\Contracts\VendusApiResource;
+use CodeTech\VendusApi\Api;
 
 class VendusResource
 {

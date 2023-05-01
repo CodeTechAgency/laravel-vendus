@@ -1,18 +1,21 @@
 # Laravel Vendus
 
-Laravel wrapper for the waap/vendus-api package.
+Laravel wrapper for the codetech/vendus-api package.
+
+[![Latest version](https://img.shields.io/github/release/CodeTechAgency/laravel-vendus?style=flat-square)](https://github.com/CodeTechAgency/laravel-vendus/releases)
+[![GitHub license](https://img.shields.io/github/license/CodeTechAgency/laravel-vendus?style=flat-square)](https://github.com/CodeTechAgency/laravel-vendus/blob/master/LICENSE)
 
 
 ## Installation
 
 Install the PHP dependency
 ```
-composer require waap/laravel-vendus
+composer require codetech/laravel-vendus
 ```
 
 Publish the configuration file (optional)
 ```
-php artisan vendor:publish --provider=Waap\\Vendus\\Providers\\VendusServiceProvider --tag=config
+php artisan vendor:publish --provider=CodeTech\\Vendus\\Providers\\VendusServiceProvider --tag=config
 ```
 
 For setting up the API key, add this line to your `.env` file:
@@ -33,16 +36,16 @@ This package comes with some translations available that you can use to present 
 Publish the translations file (optional)
 
 ```
-php artisan vendor:publish --provider=Waap\\Vendus\\Providers\\VendusServiceProvider --tag=translations
+php artisan vendor:publish --provider=CodeTech\\Vendus\\Providers\\VendusServiceProvider --tag=translations
 ```
 
 ---
 
 ## License
 
-**waap/laravel-vendus** is open-sourced software licensed under the [MIT license](https://github.com/waap-agency/laravel-vendus/blob/master/LICENSE).
+**codetech/laravel-vendus** is open-sourced software licensed under the [MIT license](https://github.com/CodeTechAgency/laravel-vendus/blob/master/LICENSE).
 
 
-## About waap
+## About CodeTech
 
-[waap](https://www.waap.pt) is a web development agency based in Matosinhos, Portugal. Oh, and we LOVE Laravel!
+[CodeTech](https://www.codetech.pt) is a web development agency based in Matosinhos, Portugal. Oh, and we LOVE Laravel!

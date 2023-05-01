@@ -1,6 +1,6 @@
 <?php
 
-namespace Waap\Vendus\Entities;
+namespace CodeTech\Vendus\Entities;
 
 abstract class VendusTax
 {

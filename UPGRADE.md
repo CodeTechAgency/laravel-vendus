@@ -9,9 +9,9 @@
 | PHP | ≥ 7.3 | ≥ 8.2 (≥ 8.3 for Laravel 13) |
 | Laravel | 6 – 10 | 11 / 12 / 13 |
 
-Update your `composer.json`:
+Update the requirement in your `composer.json`:
 
-```json
+```
 "codetech/laravel-vendus": "^2.0"
 ```
 
@@ -30,7 +30,7 @@ Because requests now go through Laravel's HTTP client, you can fake the entire V
 
 ### New `base_url` config key
 
-The Vendus API base URL is no longer hard-coded. The default remains `https://www.vendus.pt/ws/v1.1/`; override it with the `VENDUS_BASE_URL` environment variable. If you previously published `config/vendus.php`, republish it (or add the key manually):
+The Vendus API base URL is now configurable (in 1.x it was fixed inside the client). It defaults to `https://www.vendus.pt/ws/v1.1/`; override it with the `VENDUS_BASE_URL` environment variable. If you previously published `config/vendus.php`, republish it (or add the key manually):
 
 ```
 php artisan vendor:publish --provider="CodeTech\Vendus\Providers\VendusServiceProvider" --tag=config --force

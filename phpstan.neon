@@ -5,3 +5,13 @@ parameters:
     paths:
         - src
     level: 5
+    ignoreErrors:
+        # Public traits are consumed by host applications, never inside src/.
+        -
+            identifier: trait.unused
+            path: src/Traits/*
+        # Response::object() is annotated as never-null, but json_decode()
+        # returns null for non-JSON error bodies (covered by tests).
+        -
+            identifier: nullsafe.neverNull
+            path: src/Http/Endpoint.php

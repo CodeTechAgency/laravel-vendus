@@ -113,10 +113,8 @@ class VendusResource
 
     /**
      * Get errors.
-     *
-     * @return array
      */
-    public function getErrors()
+    public function getErrors(): array
     {
         return $this->vendusApiClient->getErrors();
     }

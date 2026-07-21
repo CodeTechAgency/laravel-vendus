@@ -45,7 +45,7 @@ class VendusServiceProvider extends ServiceProvider
     private function setPublishableFiles()
     {
         $this->publishes([
-            __DIR__ . '/../../resources/lang' => resource_path('lang/vendor/vendus'),
+            __DIR__ . '/../../resources/lang' => $this->app->langPath('vendor/vendus'),
         ], 'translations');
 
         $this->publishes([

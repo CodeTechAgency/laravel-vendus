@@ -17,4 +17,6 @@ return [
 
     'app_url' => env('VENDUS_APP_URL'),
 
+    'base_url' => env('VENDUS_BASE_URL', 'https://www.vendus.pt/ws/v1.1/'),
+
 ];

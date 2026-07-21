@@ -1,0 +1,2 @@
+providers:
+  - CodeTech\Vendus\Providers\VendusServiceProvider

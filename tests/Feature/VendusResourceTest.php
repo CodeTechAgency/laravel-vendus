@@ -16,9 +16,7 @@ function fakeVendusApiResource(): VendusApiResource
             return null;
         }
 
-        public function setVendusId(int $vendusId): void
-        {
-        }
+        public function setVendusId(int $vendusId): void {}
 
         public function getVendusResourceName(): string
         {

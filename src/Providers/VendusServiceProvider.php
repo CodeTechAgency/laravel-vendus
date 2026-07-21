@@ -26,7 +26,7 @@ class VendusServiceProvider extends ServiceProvider
         $this->setPublishableFiles();
 
         // Load translations from custom path
-        $this->loadTranslationsFrom(__DIR__ . '/../../resources/lang', 'vendus');
+        $this->loadTranslationsFrom(__DIR__.'/../../resources/lang', 'vendus');
     }
 
     /**
@@ -35,7 +35,7 @@ class VendusServiceProvider extends ServiceProvider
     private function setConfigurations()
     {
         $this->mergeConfigFrom(
-            __DIR__ . '/../../config/vendus.php', 'vendus'
+            __DIR__.'/../../config/vendus.php', 'vendus'
         );
     }
 
@@ -45,11 +45,11 @@ class VendusServiceProvider extends ServiceProvider
     private function setPublishableFiles()
     {
         $this->publishes([
-            __DIR__ . '/../../resources/lang' => $this->app->langPath('vendor/vendus'),
+            __DIR__.'/../../resources/lang' => $this->app->langPath('vendor/vendus'),
         ], 'translations');
 
         $this->publishes([
-            __DIR__ . '/../../config/vendus.php' => config_path('vendus.php'),
+            __DIR__.'/../../config/vendus.php' => config_path('vendus.php'),
         ], 'config');
     }
 }

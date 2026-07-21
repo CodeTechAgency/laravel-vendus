@@ -1,3 +1,5 @@
+![Laravel Vendus](https://raw.githubusercontent.com/CodeTechAgency/laravel-vendus/main/art/banner.png)
+
 # Laravel Vendus
 
 [![Latest version](https://img.shields.io/github/release/CodeTechAgency/laravel-vendus?style=flat-square)](https://github.com/CodeTechAgency/laravel-vendus/releases)

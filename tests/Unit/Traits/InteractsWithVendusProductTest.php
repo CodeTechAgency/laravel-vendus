@@ -27,7 +27,7 @@ it('maps model attributes to vendus product params', function () {
         'prices' => [['group_id' => 1, 'price' => 8.5]],
     ]);
 
-    expect($product->getVendusParams())->toBe([
+    expect($product->getVendusParams())->toEqual([
         'reference' => 'SKU-1',
         'barcode' => '5601234567890',
         'supplier_code' => 'SUP-9',

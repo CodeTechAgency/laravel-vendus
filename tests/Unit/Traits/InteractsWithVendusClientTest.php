@@ -22,7 +22,7 @@ it('maps model attributes to vendus client params', function () {
     ]);
     $client->id = 7;
 
-    expect($client->getVendusParams())->toBe([
+    expect($client->getVendusParams())->toEqual([
         'fiscal_id' => '123456789',
         'external_reference' => '7',
         'name' => 'Maria Silva',

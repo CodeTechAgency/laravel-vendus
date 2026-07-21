@@ -136,7 +136,7 @@ class Endpoint
      */
     private function handleException(RequestException $exception): void
     {
-        $errors = $exception->response->object()->errors ?? [];
+        $errors = $exception->response->object()?->errors ?? [];
 
         $messages = [];
 

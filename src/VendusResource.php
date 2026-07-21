@@ -4,6 +4,7 @@ namespace CodeTech\Vendus;
 
 use CodeTech\Vendus\Contracts\VendusApiResource;
 use CodeTech\Vendus\Http\VendusApi;
+use InvalidArgumentException;
 
 class VendusResource
 {
@@ -27,17 +28,22 @@ class VendusResource
     {
         $this->resource = $resource;
 
-        $this->vendusApiClient = new VendusApi(
-            config('vendus.api_key'),
-            config('vendus.base_url')
-        );
+        $apiKey = config('vendus.api_key');
+
+        if (! is_string($apiKey) || $apiKey === '') {
+            throw new InvalidArgumentException(
+                'The Vendus API key is not configured. Set the VENDUS_API_KEY environment variable.'
+            );
+        }
+
+        $this->vendusApiClient = new VendusApi($apiKey, config('vendus.base_url'));
     }
 
     /**
      * Get a specified resource.
      *
      * @param array $params
-     * @return bool
+     * @return mixed
      */
     public function find(array $params)
     {

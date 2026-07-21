@@ -39,6 +39,17 @@ it('returns null and records errors when a find fails', function () {
         ->and($this->api->getErrors())->toBe(['A001: Resource not found']);
 });
 
+it('records no errors when a failure response has no json body', function () {
+    Http::fake([
+        '*' => Http::response('Internal Server Error', 500),
+    ]);
+
+    $client = $this->api->clients()->find(1);
+
+    expect($client)->toBeNull()
+        ->and($this->api->getErrors())->toBe([]);
+});
+
 it('gets a listing of resources with extra query params', function () {
     Http::fake([
         '*' => Http::response([['id' => 1], ['id' => 2]]),

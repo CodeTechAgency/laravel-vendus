@@ -40,6 +40,9 @@ jobs:
 
       - name: Install dependencies
         run: |
+          # Laravel 11 is EOL and carries unpatched advisories; allow installing
+          # it so we can still test compatibility against it.
+          composer config --no-plugins policy.advisories.block false
           composer require "illuminate/http:${{ matrix.laravel }}" "illuminate/support:${{ matrix.laravel }}" --no-interaction --no-update
           composer require --dev "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
           composer update --prefer-dist --no-interaction
@@ -63,7 +66,11 @@ jobs:
           coverage: none
 
       - name: Install dependencies
-        run: composer update --prefer-dist --no-interaction --no-progress
+        run: |
+          # Testbench resolves laravel/framework; EOL versions carry unpatched
+          # advisories, so allow them for compatibility testing.
+          composer config --no-plugins policy.advisories.block false
+          composer update --prefer-dist --no-interaction --no-progress
 
       - name: Check code style (Pint)
         run: composer lint

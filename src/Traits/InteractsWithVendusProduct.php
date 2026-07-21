@@ -79,7 +79,7 @@ trait InteractsWithVendusProduct
      */
     public function getVendusSupplyPrice(): float
     {
-        return $this->supply_price ?? '';
+        return $this->supply_price ?? 0.0;
     }
 
     /**
@@ -87,7 +87,7 @@ trait InteractsWithVendusProduct
      */
     public function getVendusGrossPrice(): float
     {
-        return $this->gross_price ?? '';
+        return $this->gross_price ?? 0.0;
     }
 
     /**
@@ -193,7 +193,7 @@ trait InteractsWithVendusProduct
      */
     public function getVendusPrices(): array
     {
-        return $this->s ?? [];
+        return $this->prices ?? [];
 
     }
 

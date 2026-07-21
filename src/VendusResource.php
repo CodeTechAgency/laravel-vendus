@@ -3,7 +3,7 @@
 namespace CodeTech\Vendus;
 
 use CodeTech\Vendus\Contracts\VendusApiResource;
-use CodeTech\VendusApi\Api;
+use CodeTech\Vendus\Http\VendusApi;
 
 class VendusResource
 {
@@ -13,7 +13,7 @@ class VendusResource
     public $resource;
 
     /**
-     * @var Api
+     * @var VendusApi
      */
     protected $vendusApiClient;
 
@@ -27,7 +27,10 @@ class VendusResource
     {
         $this->resource = $resource;
 
-        $this->vendusApiClient = new Api(config('vendus.api_key'));
+        $this->vendusApiClient = new VendusApi(
+            config('vendus.api_key'),
+            config('vendus.base_url')
+        );
     }
 
     /**
@@ -38,7 +41,7 @@ class VendusResource
      */
     public function find(array $params)
     {
-        return $this->vendusApiClient->{$this->resource->getVendusResourceName()}->find($this->resource->getVendusId(), $params);
+        return $this->vendusApiClient->{$this->resource->getVendusResourceName()}()->find($this->resource->getVendusId(), $params);
     }
 
     /**

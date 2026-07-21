@@ -5,21 +5,35 @@ namespace CodeTech\Vendus\Entities;
 class VendusSalesDocument
 {
     const TYPE_FT = 'FT';
+
     const TYPE_FS = 'FS';
+
     const TYPE_FR = 'FR';
+
     const TYPE_NC = 'NC';
+
     const TYPE_DC = 'DC';
+
     const TYPE_PF = 'PF';
+
     const TYPE_OT = 'OT';
+
     const TYPE_EC = 'EC';
+
     const TYPE_GA = 'GA';
+
     const TYPE_GT = 'GT';
+
     const TYPE_GR = 'GR';
+
     const TYPE_GD = 'GD';
+
     const TYPE_RG = 'RG';
 
     const OUTPUT_PDF = 'pdf';
+
     const OUTPUT_ESCPOS = 'escpos';
+
     const OUTPUT_HTML = 'html';
 
     const CREATE_ALLOWED_PARAMS = [
@@ -56,5 +70,4 @@ class VendusSalesDocument
         'related_document_id',
         'return_qrcode',
     ];
-
 }

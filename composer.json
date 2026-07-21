@@ -25,6 +25,8 @@
     "illuminate/support": "^11.0|^12.0|^13.0"
   },
   "require-dev": {
+    "larastan/larastan": "^3.10",
+    "laravel/pint": "^1.29",
     "orchestra/testbench": "^9.0|^10.0|^11.0",
     "pestphp/pest": "^3.0|^4.0"
   },
@@ -45,6 +47,9 @@
     }
   },
   "scripts": {
+    "analyse": "vendor/bin/phpstan analyse --memory-limit=1G",
+    "format": "vendor/bin/pint",
+    "lint": "vendor/bin/pint --test",
     "test": "vendor/bin/pest"
   },
   "minimum-stability": "stable",

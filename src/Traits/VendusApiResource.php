@@ -6,8 +6,6 @@ trait VendusApiResource
 {
     /**
      * Returns the Vendus resource ID.
-     *
-     * @return int|null
      */
     public function getVendusId(): ?int
     {
@@ -16,8 +14,6 @@ trait VendusApiResource
 
     /**
      * Sets the Vendus resource ID.
-     *
-     * @param int $vendusId
      */
     public function setVendusId(int $vendusId): void
     {
@@ -27,8 +23,6 @@ trait VendusApiResource
 
     /**
      * Returns the Vendus resource date.
-     *
-     * @return string
      */
     public function getVendusDate(): string
     {
@@ -39,6 +33,7 @@ trait VendusApiResource
      * Return the link to the resource's detail page in the Vendus app.
      *
      * @return string
+     *
      * @throws \ReflectionException
      */
     public function getDetailPageLink()

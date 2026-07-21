@@ -11,8 +11,7 @@ class Endpoint
     public function __construct(
         protected VendusApi $api,
         protected string $uri
-    ) {
-    }
+    ) {}
 
     /**
      * Find the specified resource.

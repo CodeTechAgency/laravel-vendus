@@ -6,16 +6,13 @@ class VendusApi
 {
     /**
      * The error messages.
-     *
-     * @var array
      */
     private array $errors = [];
 
     public function __construct(
         protected string $apiKey,
         protected string $baseUrl = 'https://www.vendus.pt/ws/v1.1/'
-    ) {
-    }
+    ) {}
 
     /**
      * Get the clients endpoint.

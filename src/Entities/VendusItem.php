@@ -28,5 +28,4 @@ class VendusItem
         'text',
         'serial',
     ];
-
 }

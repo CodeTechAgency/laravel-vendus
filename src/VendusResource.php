@@ -18,11 +18,8 @@ class VendusResource
      */
     protected $vendusApiClient;
 
-
     /**
      * VendusResource constructor.
-     *
-     * @param VendusApiResource $resource
      */
     public function __construct(VendusApiResource $resource)
     {
@@ -42,7 +39,6 @@ class VendusResource
     /**
      * Get a specified resource.
      *
-     * @param array $params
      * @return mixed
      */
     public function find(array $params)
@@ -52,9 +48,6 @@ class VendusResource
 
     /**
      * Get a listing of the resource.
-     *
-     * @param array $params
-     * @return array
      */
     public function get(array $params): array
     {
@@ -64,7 +57,6 @@ class VendusResource
     /**
      * Creates an entity on Vendus.
      *
-     * @return array
      * @throws \Exception
      */
     public function store(): array
@@ -101,8 +93,6 @@ class VendusResource
 
     /**
      * Updates an entity on Vendus.
-     *
-     * @return array
      */
     public function update(): array
     {
@@ -114,7 +104,6 @@ class VendusResource
     /**
      * Syncs an entity with Vendus.
      *
-     * @return array
      * @throws \Exception
      */
     public function sync(): array
@@ -124,10 +113,9 @@ class VendusResource
 
     /**
      * Get errors.
-     *
-     * @return array
      */
-    public function getErrors(){
+    public function getErrors(): array
+    {
         return $this->vendusApiClient->getErrors();
     }
 }

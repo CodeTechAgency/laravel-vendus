@@ -3,7 +3,7 @@
 [![Latest version](https://img.shields.io/github/release/CodeTechAgency/laravel-vendus?style=flat-square)](https://github.com/CodeTechAgency/laravel-vendus/releases)
 [![Total downloads](https://img.shields.io/packagist/dt/codetech/laravel-vendus?style=flat-square)](https://packagist.org/packages/codetech/laravel-vendus)
 [![Tests](https://img.shields.io/github/actions/workflow/status/CodeTechAgency/laravel-vendus/tests.yml?branch=main&style=flat-square&label=tests)](https://github.com/CodeTechAgency/laravel-vendus/actions/workflows/tests.yml)
-[![GitHub license](https://img.shields.io/github/license/CodeTechAgency/laravel-vendus?style=flat-square)](https://github.com/CodeTechAgency/laravel-vendus/blob/main/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/CodeTechAgency/laravel-vendus?style=flat-square)](https://github.com/CodeTechAgency/laravel-vendus/blob/main/LICENSE.txt)
 
 Connect your Laravel application to [Vendus](https://www.vendus.pt), the Portuguese
 certified invoicing software. Keep your Eloquent models — customers and products —
@@ -44,10 +44,10 @@ $customer = Customer::find(1);
 (new VendusResource($customer))->sync();
 ```
 
-`sync()` creates the customer on Vendus (or updates it if it already exists, matching
-by external reference) and stores the resulting Vendus ID on your model. Products
-work the same way with the `InteractsWithVendusProduct` trait and `VendusProduct`
-contract.
+`sync()` creates the customer on Vendus (or updates it if it already exists — clients
+are matched by their Vendus `external_reference`) and stores the resulting Vendus ID
+on your model. Products work the same way with the `InteractsWithVendusProduct` trait
+and `VendusProduct` contract, matched by their Vendus product `reference`.
 
 ## Documentation
 

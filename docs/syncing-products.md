@@ -22,7 +22,8 @@ class Product extends Model implements VendusProduct
 ```php
 use CodeTech\Vendus\VendusResource;
 
-(new VendusResource($product))->sync();
+$resource = new VendusResource($product);
+$resource->sync();
 ```
 
 ## Attribute mapping

@@ -73,7 +73,8 @@ Wrap the model in a `VendusResource` and call `sync()`:
 ```php
 use CodeTech\Vendus\VendusResource;
 
-(new VendusResource($customer))->sync();
+$resource = new VendusResource($customer);
+$resource->sync();
 ```
 
 `sync()` decides what to do based on the local `vendus_id`:

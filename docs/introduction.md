@@ -35,14 +35,15 @@ The package is organized in three layers, from your models down to the wire:
   **`VendusApi`** client, which exposes the `clients`, `products`, `products/units`,
   `documents`, and `documents/paymentmethods` endpoints.
 
-A typical sync is three lines:
+A typical sync is a handful of lines:
 
 ```php
 use CodeTech\Vendus\VendusResource;
 
 $customer = Customer::find(1);
 
-(new VendusResource($customer))->sync();
+$resource = new VendusResource($customer);
+$resource->sync();
 ```
 
 Continue with the [requirements](requirements.md) and

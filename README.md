@@ -43,7 +43,8 @@ use CodeTech\Vendus\VendusResource;
 
 $customer = Customer::find(1);
 
-(new VendusResource($customer))->sync();
+$resource = new VendusResource($customer);
+$resource->sync();
 ```
 
 `sync()` creates the customer on Vendus (or updates it if it already exists — clients

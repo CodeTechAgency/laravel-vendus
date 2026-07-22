@@ -13,7 +13,7 @@ payload and create the document.
 use CodeTech\Vendus\Entities\VendusSalesDocument;
 use CodeTech\Vendus\Http\VendusApi;
 
-$api = new VendusApi(config('vendus.api_key'));
+$api = new VendusApi(config('vendus.api_key'), config('vendus.base_url'));
 
 $document = $api->documents()->create([
     'type' => VendusSalesDocument::TYPE_FT,

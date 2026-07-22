@@ -107,8 +107,10 @@ When Vendus rejects a create or update, an
 are collected for inspection:
 
 ```php
+$resource = new VendusResource($customer);
+
 try {
-    (new VendusResource($customer))->sync();
+    $resource->sync();
 } catch (RequestException $e) {
     $errors = $resource->getErrors(); // ['field' => 'code: message', …]
 }

@@ -8,7 +8,7 @@ The package is configured through environment variables (see `config/vendus.php`
 
 ```ini
 VENDUS_API_KEY=your-api-key
-VENDUS_APP_URL=https://www.vendus.pt
+VENDUS_APP_URL=https://your-account.vendus.pt
 VENDUS_MODE=tests
 VENDUS_BASE_URL=https://www.vendus.pt/ws/v1.1/
 ```
@@ -22,13 +22,15 @@ with an `InvalidArgumentException` instead of firing unauthenticated requests.
 
 ## App URL
 
-`VENDUS_APP_URL` is the URL you use to access the Vendus web application. It is
-only used by `getDetailPageLink()` to build links from your application straight
-to a synced record's detail page in the Vendus backoffice:
+`VENDUS_APP_URL` is the URL you use to access the Vendus web application. Every
+Vendus account lives on its own subdomain (e.g. `https://your-account.vendus.pt`),
+so this value is account-specific — there is no global default. It is only used
+by `getDetailPageLink()` to build links from your application straight to a
+synced record's detail page in the Vendus backoffice:
 
 ```php
 $customer->getDetailPageLink();
-// https://www.vendus.pt/clients/detail/id/123
+// https://your-account.vendus.pt/clients/detail/id/123
 ```
 
 ## Mode
@@ -48,8 +50,11 @@ Set `VENDUS_MODE=normal` in production.
 ## Base URL
 
 `VENDUS_BASE_URL` points at Vendus API v1.1 by default. You will rarely need to
-change it — it exists so the client can be pointed at a different API version or
-host without touching code.
+change it — the client is written against v1.1, so pointing it at a different
+API version is not supported. The override exists for two reasons: Vendus serves
+the same API on country-specific hosts (e.g. `https://www.vendus.cv/ws/v1.1/`
+for Cape Verde accounts), and test suites can point the client at a fake host so
+no real API calls are ever made.
 
 ## Publishing the config file
 

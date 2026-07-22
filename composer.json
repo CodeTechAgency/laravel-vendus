@@ -1,14 +1,17 @@
 {
   "name": "codetech/laravel-vendus",
-  "description": "Laravel wrapper for the codetech/vendus-api package.",
+  "description": "Vendus (Cegid Vendus) integration for Laravel — sync clients and products, and issue certified invoices and sales documents.",
   "keywords": [
+    "laravel",
     "vendus",
+    "cegid-vendus",
+    "invoicing",
     "faturação",
     "faturas",
     "recibos",
-    "laravel-vendus",
-    "laravel",
-    "codetech"
+    "pos",
+    "portugal",
+    "saft"
   ],
   "authors": [
     {
